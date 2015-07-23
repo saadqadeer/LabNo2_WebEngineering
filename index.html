@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Pac-Man</title>
+        <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.5/dojo/dojo.xd.js"></script>
+        <script type="text/javascript" src="js/animate.js">
+        </script>
+    </head>
+    <body>
+    	
+    <div style="position:absolute;left:450px"><H1 STYLE="text-align: center">Pac Man Game</H1></div>
+
+    <div style="position:absolute; left:250px">
+
+
+		<div id="backGround" style="height:400; width:400; position:absolute; top:100px; left:100px; background-color:black"></div>
+		<div id="blocktop" style="height:10; width:420; position:absolute; top:90px; left:90px; background-color:red"></div>
+		<div id="blockdown" style="height:10; width:420; position:absolute; top:500px; left:90px; background-color:red"></div>
+		<div id="blockright" style="height:420; width:10; position:absolute; top:90px; left:500px; background-color:red"></div>
+		<div id="blockleft" style="height:420; width:10; position:absolute; top:90px; left:90px; background-color:red"></div>
+		<div id="bintop" style="height:10; width:338; position:absolute; top:131px; left:131px; background-color:red"></div>
+		<div id="bindown" style="height:10; width:338; position:absolute; top:459px; left:131px; background-color:red"></div>
+		<div id="binleft" style="height:256; width:10; position:absolute; top:172px; left:131px; background-color:red"></div>
+		<div id="binright" style="height:256; width:10; position:absolute; top:172px; left:459px; background-color:red"></div>
+		<div id="bmidup" style="height:10; width:256; position:absolute; top:172px; left:172px; background-color:red"></div>
+		<div id="bmiddown" style="height:10; width:256; position:absolute; top:418px; left:172px; background-color:red"></div>
+		
+		<div id="blockr" style="height:174; width:10; position:absolute; top:213px; left:418px; background-color:red"></div>
+		<div id="blockl" style="height:174; width:10; position:absolute; top:213px; left:172px; background-color:red"></div>
+		
+		<div id="gtop" style="height:30; width:174; position:absolute; top:213px; left:213px; background-color:red"></div>
+		<div id="gleft" style="height:133; width:41; position:absolute; top:213px; left:213px; background-color:red"></div>
+		<div id="gdown" style="height:30; width:174; position:absolute; top:316px; left:213px; background-color:red"></div>
+		<div id="pacblock" style="height:10; width:174; position:absolute; top:377px; left:213px; background-color:red"></div>
+		<b><div id="score" style="height:30; width:60;position:absolute; top:550;left:100;font=20">Score:&nbsp;0</div></b>
+		
+		<img id="s1" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:105px; background-color:red"/>
+		<img id="s2" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:135px; background-color:red"/>
+		<img id="s3" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:165px; background-color:red"/>
+		<img id="s4" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:195px; background-color:red"/>
+		<img id="s5" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:225px; background-color:red"/>
+		<img id="s6" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:255px; background-color:red"/>
+		<img id="s7" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:285px; background-color:red"/>
+		<img id="s8" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:315px; background-color:red"/>
+		<img id="s9" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:345px; background-color:red"/>
+		<img id="s10" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:375px; background-color:red"/>
+		<img id="s11" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:405px; background-color:red"/>
+		<img id="s12" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:435px; background-color:red"/>
+		<img id="s13" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:102px; left:472px; background-color:red"/>
+		
+		<img id="s15" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:132px; left:104px; background-color:red"/>
+		<img id="s16" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:162px; left:104px; background-color:red"/>
+		<img id="s17" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:192px; left:104px; background-color:red"/>
+		<img id="s18" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:222px; left:104px; background-color:red"/>
+		<img id="s19" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:252px; left:104px; background-color:red"/>
+		<img id="s20" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:282px; left:104px; background-color:red"/>
+		<img id="s21" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:312px; left:104px; background-color:red"/>
+		<img id="s22" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:342px; left:104px; background-color:red"/>
+		<img id="s23" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:372px; left:104px; background-color:red"/>
+		<img id="s24" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:402px; left:104px; background-color:red"/>
+		<img id="s25" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:104px; background-color:red"/>
+		<img id="s26" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:104px; background-color:red"/>
+		
+		
+		<img id="s27" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:105px; background-color:red"/>
+		<img id="s28" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:135px; background-color:red"/>
+		<img id="s29" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:165px; background-color:red"/>
+		<img id="s30" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:195px; background-color:red"/>
+		<img id="s31" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:225px; background-color:red"/>
+		<img id="s32" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:255px; background-color:red"/>
+		<img id="s33" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:285px; background-color:red"/>
+		<img id="s34" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:315px; background-color:red"/>
+		<img id="s35" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:345px; background-color:red"/>
+		<img id="s36" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:375px; background-color:red"/>
+		<img id="s37" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:405px; background-color:red"/>
+		<img id="s38" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:435px; background-color:red"/>
+		<img id="s39" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:472px; background-color:red"/>
+		
+		<img id="s40" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:132px; left:472px; background-color:red"/>
+		<img id="s41" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:162px; left:472px; background-color:red"/>
+		<img id="s42" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:192px; left:472px; background-color:red"/>
+		<img id="s43" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:222px; left:472px; background-color:red"/>
+		<img id="s44" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:252px; left:472px; background-color:red"/>
+		<img id="s45" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:282px; left:472px; background-color:red"/>
+		<img id="s46" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:312px; left:472px; background-color:red"/>
+		<img id="s47" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:342px; left:472px; background-color:red"/>
+		<img id="s48" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:372px; left:472px; background-color:red"/>
+		<img id="s49" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:402px; left:472px; background-color:red"/>
+		<img id="s50" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:472px; background-color:red"/>
+		<img id="s51" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:470px; left:472px; background-color:red"/>
+		
+		<img id="s52" src="Images/3.png"  style="height:27; width:27; position:absolute; top:432px; left:435px; background-color:red"/>
+		<img id="s53" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:405px; background-color:red"/>
+		<img id="s54" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:375px; background-color:red"/>
+		<img id="s55" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:345px; background-color:red"/>
+		<img id="s56" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:315px; background-color:red"/>
+		<img id="s57" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:285px; background-color:red"/>
+		<img id="s58" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:255px; background-color:red"/>
+		<img id="s59" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:225px; background-color:red"/>
+		<img id="s60" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:195px; background-color:red"/>
+		<img id="s61" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:165px; background-color:red"/>
+		<img id="s62" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:432px; left:135px; background-color:red"/>
+		
+		
+		<img id="s63" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:430px; background-color:red"/>
+		<img id="s64" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:405px; background-color:red"/>
+		<img id="s65" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:375px; background-color:red"/>
+		<img id="s66" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:345px; background-color:red"/>
+		<img id="s67" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:315px; background-color:red"/>
+		<img id="s68" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:285px; background-color:red"/>
+		<img id="s69" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:255px; background-color:red"/>
+		<img id="s70" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:225px; background-color:red"/>
+		<img id="s71" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:195px; background-color:red"/>
+		<img id="s72" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:165px; background-color:red"/>
+		<img id="s73" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:142px; left:135px; background-color:red"/>
+		
+		<img id="s74" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:172px; left:430px; background-color:red"/>
+		<img id="s75" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:202px; left:430px; background-color:red"/>
+		<img id="s76" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:232px; left:430px; background-color:red"/>
+		<img id="s77" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:262px; left:430px; background-color:red"/>
+		<img id="s78" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:292px; left:430px; background-color:red"/>
+		<img id="s79" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:322px; left:430px; background-color:red"/>
+		<img id="s80" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:352px; left:430px; background-color:red"/>
+		<img id="s81" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:430px; background-color:red"/>
+		
+		<img id="s82" src="Images/1.png"  style="height:27; width:27; position:absolute; top:390px; left:144px; background-color:red"/>
+		<img id="s83" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:355px; left:144px; background-color:red"/>
+		<img id="s84" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:325px; left:144px; background-color:red"/>
+		<img id="s85" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:295px; left:144px; background-color:red"/>
+		<img id="s86" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:265px; left:144px; background-color:red"/>
+		<img id="s87" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:235px; left:144px; background-color:red"/>
+		<img id="s88" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:205px; left:144px; background-color:red"/>
+		<img id="s89" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:175px; left:144px; background-color:red"/>
+		
+		<img id="s90" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:185px; background-color:red"/>
+		<img id="s91" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:215px; background-color:red"/>
+		<img id="s92" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:245px; background-color:red"/>
+		<img id="s93" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:275px; background-color:red"/>
+		<img id="s94" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:305px; background-color:red"/>
+		<img id="s95" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:335px; background-color:red"/>
+		<img id="s96" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:365px; background-color:red"/>
+		<img id="s97" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:395px; background-color:red"/>
+		
+		<img id="s98" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:390px; left:185px; background-color:red"/>
+		<img id="s99" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:360px; left:185px; background-color:red"/>
+		<img id="s100" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:330px; left:185px; background-color:red"/>
+		<img id="s101" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:300px; left:185px; background-color:red"/>
+		<img id="s102" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:270px; left:185px; background-color:red"/>
+		<img id="s103" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:240px; left:185px; background-color:red"/>
+		<img id="s104" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:205px; left:185px; background-color:red"/>
+		
+		<img id="s105" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:185px; background-color:red"/>
+		<img id="s106" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:215px; background-color:red"/>
+		<img id="s107" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:245px; background-color:red"/>
+		<img id="s108" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:275px; background-color:red"/>
+		<img id="s109" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:305px; background-color:red"/>
+		<img id="s110" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:335px; background-color:red"/>
+		<img id="s111" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:365px; background-color:red"/>
+		<img id="s112" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:183px; left:395px; background-color:red"/>
+		
+		<img id="s113" src="Images/2.png"  style="height:27; width:27; position:absolute; top:213px; left:389px; background-color:red"/>
+		<img id="s114" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:243px; left:389px; background-color:red"/>
+		<img id="s115" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:273px; left:389px; background-color:red"/>
+		<img id="s116" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:303px; left:389px; background-color:red"/>
+		<img id="s117" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:333px; left:389px; background-color:red"/>
+		<img id="s118" src="Images/pnt.png"  style="height:27; width:27; position:absolute; top:363px; left:389px; background-color:red"/>
+        
+		<img src="Images/pacmanRight.png" id="pacmanRight" style="left: 270px; position: absolute; top: 270px">
+		<img src="Images/pacmanLeft.png" id="pacmanLeft" style="position: absolute; display:none;">
+		<img src="Images/pacmanUp.png" id="pacmanUp" style="position: absolute; display:none;">
+		<img src="Images/pacmanDown.png" id="pacmanDown" style="position: absolute; display:none;">
+		</div>
+    </body>
+</html>
